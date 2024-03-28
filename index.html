@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input Sum Calculator</title>
+</head>
+<style>
+    body
+    {
+        background-color: rgba(10, 134, 134, 0.622);
+        padding-left: 40%;
+        padding-bottom: 10%;
+    }
+    button
+    {
+        background-color:rgb(160, 203, 240);
+    }
+</style>
+<body>
+
+<h2>Input Sum Calculator</h2>
+
+<label for="num1">Enter first number:</label>
+<input type="number" id="num1">
+<br><br>
+
+<label for="num2">Enter second number:</label>
+<input type="number" id="num2">
+<br><br>
+
+<button onclick="calculateSum()">Calculate Sum</button>
+
+<p id="result"></p>
+
+<script>
+function calculateSum()
+{
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    if (!isNaN(num1) && !isNaN(num2)) 
+    {
+
+        var sum = num1 + num2;
+        document.getElementById("result").innerHTML = "Sum: " + sum;
+    } 
+    else
+     {
+        document.getElementById("result").innerHTML = "Please enter valid numbers.";
+    }
+}
+</script>
+
+</body>
+</html>
